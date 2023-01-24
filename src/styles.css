@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    margin: 15rem auto 0 auto;
+    width: 60vw;
+    display: grid;
+    gap: 32px;
+}
+
+h1{
+    text-align: center;
+}
+
+:is(.email, .country, .zip, .pwd, .pwd-r){
+    display: grid;
+}
+
+input, select{
+    padding: 4px;
+    margin-top: 8px;
+}
+
+input:focus, option:focus, select:focus{
+    outline: none;
+}
+
+.error{
+    background-color: #FECDE5;
+}
+
+.error-msg{
+    background-color:#FFB5D9;
+    padding: 4px;
+    font-size: 0.85rem;
+    margin: 4px 8px 0 8px;
+
+}
+
+.hide{
+    display: none;
+}
+
+li{
+    list-style: none;
+}
+
+.pwd > p{
+    margin: 4px 0;
+    
+}
+.pwd > p, .pwd > ul{
+    padding-left: 8px;
+    color:#000080;
+    font-size: 0.85rem;
+}

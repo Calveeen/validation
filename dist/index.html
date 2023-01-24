@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles.css">
+    <title>Validation Form</title>
+</head>
+<body>
+    <form action="#" novalidate>
+        <h1>Validation Form</h1>
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required minlength="8">
+        </div>
+
+        <div class="country">
+            <label for="country">Country</label>
+            <select name="country" id="country"></select>
+        </div>
+
+        <div class="zip">
+            <label for="zip">Zip Code (xxx-xxx)</label>
+            <input type="text" id="zip" name="zip" required maxlength="7">
+        </div>
+
+        <div class="pwd">
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd" autocomplete="off" required maxlength="16">
+            <p>
+                Password must contain the following:
+                <ul>
+                    <li><span>1. At least one uppercase letter</span></li>
+                    <li><span>2. At least one number</span></li>
+                    <li><span>3. Must be more than 8 characters, but less than 16</span></li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="pwd-r">
+            <label for="pwd-r">Password Confirm</label>
+            <input type="password" id="pwd-r" name="pwd-r" autocomplete="off">
+        </div>
+        <input type="submit" id="submit">
+    </form>
+    <script src="./main.js"></script>
+</body>
+</html>
