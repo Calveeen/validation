@@ -27,7 +27,6 @@ submit.addEventListener("click", (e) =>{
     }
     if(counter == 4){
         alert("ALL VALID NICE");
-        counter = 0;
     }
     counter = 0;
     e.preventDefault();
@@ -64,19 +63,19 @@ confirm.addEventListener("input", () =>{
 (function populateCountries(){
     const list = [];
     const dropdown = document.querySelector("#country");
-
+    //append all the countries into the empty list array
     for(const key in countries){
         const name = countries[key].name;
         list.push(name);
     }   
-
+    //sort the countries alphabetically
     list.sort((a,b) =>{
         if(a.toLowerCase() < b.toLowerCase()){
             return -1;
         }
         return 1;
     });
-
+    //append to the dom
     for(let i=0; i<list.length; i++){
         const country = document.createElement("option");
         country.value = list[i];
